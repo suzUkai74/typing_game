@@ -1,0 +1,8 @@
+node_modules/
+dist/**/*.html
+build/**/*.html
+build/css/**/*.css
+!build/css/reset.css
+build/js/**/*.js
+!build/js/jquery.min.js
+!build/js/lodash.min.js
