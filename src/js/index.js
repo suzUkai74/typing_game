@@ -1,6 +1,7 @@
 'use strict';
 
 import 'babel-polyfill';
+import * as Pokemon from './pokemon.js';
 
 const PROGRESS_INTERBAL = 1800;
 const WAIT_TIME = 500;
@@ -14,14 +15,6 @@ let answeredQuestions = [];
 let $start = $('#start');
 let $game = $('#game');
 let $result = $('#result');
-
-const readQuestionData = () => {
-  return new Promise ((resolve, reject) => {
-    $.getJSON("/docs/pokemon.json", (data) => {
-      resolve(data);
-    });
-  });
-};
 
 const sleep = (ms) => {
  return new Promise((resolve, reject) => {
@@ -41,8 +34,8 @@ const updateProgress = () => {
   }
 };
 
-const reset = async () => {
-  questionData = await readQuestionData();
+const reset = () => {
+  questionData = Object.assign(questionData, Pokemon.pokemons);
   questionData = _.shuffle(questionData);
   mistake = 0;
   progress = 0;
