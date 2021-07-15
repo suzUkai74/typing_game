@@ -9,22 +9,20 @@ glob.sync("./src/js/**/*.js").map(function (file) {
 
 module.exports = {
   src: './src',
-  dest: './dist',
+  dest: './dest',
   build: './build',
   pug_src: [
     './src/pug/**/*.pug',
-    '!./src/pug/include/*.pug',
     '!./src/pug/_*.pug'
   ],
   sass_src: [
     './src/sass/**/*.scss',
-    '!./src/sass/base/*.scss',
   ],
-  sass_dest: './dist/css',
+  sass_dest: './dest/css',
   js_src: [
     './src/js/**/*.js'
   ],
-  js_dest: './dist/js',
+  js_dest: './dest/js',
   webpack: {
     entry: entries,
     output: {

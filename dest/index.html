@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=1">
+    <title>タイピングゲーム</title>
+    <meta name="description" content="タイピングゲームです">
+    <meta name="keywords" content="タイピングゲーム">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/lodash.min.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <div id="start"><a class="start-btn" href="#" style="display: none;">ちょうせん</a></div>
+      <div id="game" style="display: none;">
+        <progress id="progressBar" value="0" max="100"></progress>
+        <div class="typing-img"><img src=""></div>
+        <div class="typing-name"></div>
+        <div class="typing-roma"></div>
+        <div class="typing-input"></div>
+      </div>
+      <div id="result" style="display: none;"><a class="restart-btn" href="#" style="display: none;">もういちど</a>
+        <div class="pokemons"></div>
+        <div class="answered">かいとうすう：<span class="answered-count"></span></div>
+        <div class="mistake">ミスしたかいすう：<span class="mistake-count"></span></div>
+      </div>
+    </main>
+    <script type="text/javascript" src="/js/index.js"></script>
+  </body>
+</html>
